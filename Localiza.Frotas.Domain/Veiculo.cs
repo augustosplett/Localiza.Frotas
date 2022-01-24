@@ -15,5 +15,4 @@ namespace Localiza.Frotas.Domain
 
     }
 
-
 }

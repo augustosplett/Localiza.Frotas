@@ -1,3 +1,5 @@
+using Localiza.Frotas.Domain;
+using Localiza.Frotas.Infra.Repository;
 using Localiza.Frotas.Infra.Singleton;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<SingletonContainer>();
+
+builder.Services.AddSingleton<IVeiculoRepository, InMemoryRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
